@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "TOGORE",
+  "version": "1.1",
+  "description": "TOGORE the 2nd abandoned son of the Dreemurr family, rare chance to see him haunting websites.",
+  "icons": {
+    "16": "icon 16x16.png",
+    "32": "icon 32x32.png",
+    "192": "icon 192x192.png"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon 16x16.png",
+      "32": "icon 32x32.png",
+      "192": "icon 192x192.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "togore.png",
+        "togore.mp3",
+        "icon 16x16.png",
+        "icon 32x32.png",
+        "icon 192x192.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
